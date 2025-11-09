@@ -138,7 +138,6 @@ def decrypt_file(input_filepath: str, output_filepath: str, key_string: str):
                 
                 # Giải mã khối 'current'
                 decrypted_block = cipher.decrypt_block(current_ciphertext_block)
-                decrypted_block = cipher.decrypt_block(current_ciphertext_block)
                 plaintext_block = _xor_bytes(decrypted_block, previous_ciphertext_block)
                 f_out.write(plaintext_block)
                 
